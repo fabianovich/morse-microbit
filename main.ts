@@ -1,31 +1,32 @@
-radio.setGroup(69)
-input.onButtonPressed(Button.A, function on_button_pressed_a() {
-    radio.sendNumber(0)
-})
-input.onButtonPressed(Button.B, function on_button_pressed_b() {
-    radio.sendNumber(1)
-})
-basic.forever(function on_forever() {
-    radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
-        if (receivedNumber == 0) {
-            basic.showLeds(`
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 0) {
+        basic.showLeds(`
             . . . . .
             . . # . .
             . # # # .
             . . # . .
             . . . . .
             `)
-        }
-        
-        if (receivedNumber == 1) {
-            basic.showLeds(`
+        basic.pause(100)
+        basic.clearScreen()
+        basic.pause(100)
+    } else if (receivedNumber == 1) {
+        basic.showLeds(`
+            . # # # .
             # # # # #
             # # # # #
             # # # # #
-            # # # # #
-            # # # # #
+            . # # # .
             `)
-        }
-        
-    })
+        basic.pause(100)
+        basic.clearScreen()
+        basic.pause(100)
+    }
 })
+input.onButtonPressed(Button.A, function () {
+    radio.sendNumber(0)
+})
+input.onButtonPressed(Button.B, function () {
+    radio.sendNumber(1)
+})
+radio.setGroup(69)
