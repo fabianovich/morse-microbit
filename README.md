@@ -1,7 +1,7 @@
 
 > Open this page at [https://fabianovich.github.io/morse-microbit/](https://fabianovich.github.io/morse-microbit/)
 
-## what is ts (this)
+## what is ts (this)??
 a for short, b for long
 2 seperate microbits have ts running and communicate to each other via bluetooth
 
@@ -14,7 +14,7 @@ This repository can be added as an **extension** in MakeCode.
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/fabianovich/morse-microbit** and import
 
-## Edit this project
+## Edit this project type shi
 
 To edit this repository in MakeCode.
 
